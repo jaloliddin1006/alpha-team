@@ -1,5 +1,5 @@
 # ICT-JOB
-#### You can try the ICT JOB platform [enter through this link](https://ishbor.uz)
+#### You can try the ICT JOB platform [enter through this link](https://job.ictacademy.uz)
 Open source data links that we used:
 
 - https://data.egov.uz/rus

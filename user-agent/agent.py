@@ -1,5 +1,5 @@
 from pyrogram import Client, filters, types
-from .classifer import classifier
+from classifer import classifier
 
 API_ID = 25652534
 API_HASH = '9787c9f77cfb0182c002ea94c4073e73'
@@ -16,9 +16,9 @@ app = Client("userbot2", API_ID, API_HASH)
 @app.on_message(filters.channel)
 async def nb_command(_, msg: types.Message):
 
-    result = classifier(msg.text)
-    if result[1] > 70:
-        await msg.copy(973108256)
+    category = classifier(msg.text)
+    # if result[1] > 70:
+    await msg.copy(973108256)
 
 
 
