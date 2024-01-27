@@ -1,0 +1,184 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.nav{
+    list-style-type: none;
+    display: flex;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav li{
+    padding: 5px 20px 5px 0;
+}
+.nav li a{
+    text-decoration: none;
+    color: black;
+}
+.nav-main{
+    justify-content: space-between;
+}
+.right{
+    display: flex;
+}
+.right button{
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: rgb(54, 207, 131);
+}
+
+.group{
+    display: flex;
+    margin-top: 30px;
+}
+
+.card{
+    width: 300px;
+    height: 180px;
+    border-radius: 5px;
+    
+}
+.card img{
+    border-radius: 5px;
+}
+
+.col-md-1 img{
+    width: 120px;
+    height: 120px;
+}
+
+.col-md-8{
+    padding-left: 56px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.date-title{
+    width: 220px;
+
+}
+
+.date-title li{
+    margin-top: 12px;
+}
+
+.date-data{
+    width: 220px;
+}
+
+.date-data li{
+    margin-top: 12px;
+    color: #888;
+}
+
+.data{
+    margin-top: 53px;
+}
+
+.text-black{
+    color: black;
+}
+
+.border-b{
+     border-bottom: 1px solid rgb(180, 175, 175) !important; 
+     margin-top: 10px;
+     margin-bottom: 20px;
+}
+
+.size-1{
+    font-size: 12px;
+}
+
+.size-2{
+    font-size: 14px;
+}
+.date-text{
+    width: 400px;
+}
+
+input[type=range]{
+    width: 100%;
+    color: #1FC78F;
+    background-color: #1FC78F;
+
+}
+
+.uploadButton {
+    display: none;
+  }
+  .uploadLabel{
+    position: absolute;
+    left: 30%;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 7px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #DDE1E6;
+    color: #333;
+  }
+
+
+footer{
+    width: 100%;
+    height: 404px;
+    background-color:#F2F4F8;
+    padding-top: 80px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 80px;
+}
+
+
+
+footer ul{
+    list-style-type: none;
+}
+
+
+.faq{
+    margin-top: 30px;
+}
+.faq img{
+    margin-right: 10px;
+}
+
+.text{
+    color: #697077;
+    margin-top: 40px;
+}
+
+.nav-text a{
+    text-decoration: none;
+    color: #697077;
+    font-size: 16px;
+}
+
+.nav-contact a{
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-contact p{
+    color: #697077;
+}
+
+
+form p{
+    margin: 0;
+}
+
