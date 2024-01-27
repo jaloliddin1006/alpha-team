@@ -16,7 +16,7 @@ class Technology(models.Model):
         return f"{self.name}"
 
 
-class User(BaseUser):
+class User(models.Model):
     middle_name = models.CharField(max_length=225, blank=True, null=True)
     last_name = models.CharField(max_length=225, blank=True, null=True)
     date_of_birth = models.DateField(null=True, blank=True)
@@ -24,13 +24,15 @@ class User(BaseUser):
     speciality = models.CharField(max_length=225, null=True, blank=True)
     duration = models.ForeignKey(Duration, on_delete=models.CASCADE, null=True, blank=True)
     technologies = models.ManyToManyField(Technology, blank=True)
+    user = models.OneToOneField(BaseUser, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.name} {self.last_name}"
 
 
-class Organization(BaseUser):
+class Organization(models.Model):
     description = models.TextField(null=True, blank=True)
+    user = models.OneToOneField(BaseUser, on_delete=models.CASCADE)
 
 
 class Vacancy(models.Model):

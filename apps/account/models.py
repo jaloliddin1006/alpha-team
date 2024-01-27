@@ -51,5 +51,9 @@ class BaseUser(AbstractBaseUser, PermissionsMixin):
     is_admin = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
 
-    class Meta:
-        abstract = True
+    objects = AccountManager()
+    USERNAME_FIELD = 'phone_number'
+    REQUIRED_FIELDS = []
+
+    def __str__(self):
+        return f"{self.name}"
