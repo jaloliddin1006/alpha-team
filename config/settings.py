@@ -16,7 +16,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-AUTH_USER_MODEL = 'account.Account'
+AUTH_USER_MODEL = 'account.BaseUser'
 
 CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
@@ -83,10 +83,24 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+"""
+
+# <=============================================== PostgresSQL ========================================================>
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'opendata',
+        'USER': 'opendata',
+        'PASSWORD': 'opendata',
+        'HOST': '164.92.168.96',
+        'PORT': 5432,
     }
 }
 
