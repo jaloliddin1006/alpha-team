@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT JOB</title>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{% static 'ict-works/style/style.css' %}">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="menu">
+            <div class="logo">
+                <img src="{% static 'ict-works/img/Logo.png' %}" alt="ICT JOB logotip">
+            </div>
+            <nav>
+                <ul>
+                    {% comment %} <li class="kurslar"><a href="#">Kurslar</a></li> {% endcomment %}
+                    <li class="xizmatlar"><a href="#">Xizmatlar</a></li>
+                    <li class="haqimizda"><a href="#">Biz haqimizda <i style="margin-left: 4px;" class="fas fa-angle-down"></i></a></li>
+                    <li class="yangiliklar"><a href="#">Yangiliklar</a></li>
+                    <li class="ict"><a href="#"><i style="margin-right: 8px;" class="fas fa-briefcase"></i> ICT JOB</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-left">
+            {% if request.user.is_authenticated %}
+                <a href="#"><i style="margin-right: 8px;" class="fas fa-sign-in-alt"></i> CHIQISH</a>
+            {% else %}
+                <a href="#"><i style="margin-right: 8px;" class="fas fa-sign-in-alt"></i> KIRISH</a>
+            {% endif %}
+
+            <span><i style="color: #1FC78F; margin-right: 8px;" class="fas fa-phone-alt"></i> +95 143-00-13</span>
+        </div>
+    </header>
+
+    
+    <div class="">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+
+
+    <div class="footer">
+        <div class="right">
+            <div class="logo">
+                <img src="{% static 'ict-works/img/Logofoot.png' %}" alt="Logo Footer">
+            </div>
+            <div class="links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <span>2017-2020 &copy; ICT ACADEMY<br>Barcha huquqlar himoyalangan</span>
+        </div>
+
+        <div class="left">
+            <div class="menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">Bosh sahifa</a></li>
+                    {% comment %} <li><a href="#">Kurslar</a></li> {% endcomment %}
+                    <li><a href="#">Xizmatlar</a></li>
+                    <li><a href="#">Biz haqimizda</a></li>
+                    <li><a href="#">Yangiliklar</a></li>
+                    <li><a href="#">ICT works</a></li>
+                </ul>
+            </div>
+
+   
+
+            <div class="contact">
+                <h3>Kontaktlar</h3>
+                <ul>
+                    <li><i style="margin-right: 10px;" class="far fa-envelope"></i>ict_academy@gmail.com</li>
+                    <li><i style="margin-right: 10px;" class="fas fa-phone-alt"></i>Qo'ng'iroq buyurtma qilish</li>
+                    <li><span style="color: #121619; font-weight: 600; line-height: 180%;">+998 (95) 143-00-13</span></li>
+                    <li><span>Dushanbadan - Yakshanbagacha<br>8:00 dan 22:00</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

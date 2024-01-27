@@ -1,41 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main2.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
-    <title>Document</title>
-</head>
-<body>
-    
-    <div class="container">
-        <header>
-            <div class="nav-main d-flex">
-               <ul class="nav left">
-                   <li><img src="img/logo.png" width="60" alt=""></li>
-                  <li><a href="#">Kurslar</a></li> 
-                  <li><a href="#">Xizmatlar</a></li> 
-                  <li><a href="#Biz haqimizda"></a> <i class="fas fa-angle-down"></i></li> 
-                  <li><a href="#">Yangiliklar</a></li> 
-                  <li><i class="fas fa-briefcase mx-1"></i><a href="#">ICT Works</a></li> 
-            </ul>
-    
-            <ul class="nav right">
-                <li>
-                    <button> <i class="fas fa-sign-in-alt text-white"></i> KIRISH</button>
-                </li>
-                <li>
-                   <i class="fas fa-phone-alt text-success"></i>
-                </li>
-                <li>
-                    +998 95 143 00 13
-                </li>
-            </ul>
-            </div>
-        </header> 
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
 
         <main>
             <p>
@@ -132,75 +99,4 @@
 
     </div>
 
-
-    <footer>
-        <div class="row">
-            <div class="col-md-3 justify-content-center d-flex">
-                  <ul>
-                      <li>
-                             <img src="img/ict-logo-black.png" width="98" height="40" alt=""> 
-                      </li>
-                      <li class="faq">
-                          <img src="img/Facebook.png" alt="">
-                          <img src="img/Telegram.png" alt="">
-                          <img src="img/Youtube.png" alt="">
-                          <img src="img/Instagram.png" alt="">
-                          
-                      </li>
-    
-                      <li>
-                          <p class="text">
-                              2017-2020 © ICT ACADEMY
-                              Barcha huquqlar himoyalangan
-                          </p>
-                      </li>
-                  </ul>
-    
-                 
-            </div>
-    
-            <div class="col-md-3 justify-content-center d-flex">
-             
-              <ul class="nav-text">
-                  <li>
-                      <h3>Menu</h3>
-                  </li>
-                  <li><a href="#"><p>Bosh sahifa</p></a></li>
-                  <li><a href="#"><p>Kurslar</p> </a></li>
-                  <li><a href="#"><p>Xizmatlar</p></a></li>
-                  <li><a href="#"><p>Biz haqimizda</p></a></li>
-                  <li><a href="#"><p>Yangiliklar</p></a></li>
-                  <li><a href="#"><p>ICT works</p></a></li>
-              </ul>
-            </div>
-    
-            <div class="col-md-3 justify-content-center d-flex">
-             
-              <ul class="nav-text">
-                  <li>
-                      <h3>Account</h3>
-                  </li>
-                  <li><a href="#"><p>Tizimga kirish</p></a></li>
-                  <li><a href="#"><p>Ro'yxatdan o'tish</p> </a></li>
-                 
-              </ul>
-            </div>
-    
-            <div class="col-md-3 justify-content-center d-flex">
-             
-              <ul class="nav-contact">
-                  <li>
-                      <h3>Kontaktlar</h3>
-                  </li>
-                  <li><a href="#"><p>ict_academy@gmail.com</p></a></li>
-                  <li><a href="#"><p>Qo’ng’iroq buyurtma qilish</p> </a></li>
-                  <li><a href="#"><h5>+998 (95) 143-00-13</h5>
-                      <p>Dushanbadan - Yakshanbagacha <br>
-                          8:00 dan 22:00</p></a></li>
-              </ul>
-            </div>
-    
-        </div>
-    </footer>
-</body>
-</html>
+{% block content %}
