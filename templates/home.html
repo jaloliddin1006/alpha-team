@@ -20,7 +20,7 @@
         </div>
 
         <div class="box_3">
-            <span>159</span>
+            <span>8</span>
             <span>kompaniyalar <i style="margin-left: 8px;" class="fas fa-external-link-square-alt"></i></span>
         </div>
     </div>
@@ -104,8 +104,20 @@
             <h3>So'nggi vakansiyalar</h3>
             <a href="#">Barchasini ko'rish<i style="margin-left: 8px;" class="fas fa-external-link-square-alt"></i></a>
         </div>
-
+        {% for vacancy in vacancies %}
         <div class="kurs">
+               <div class="box_1">
+                <div class="box-right">
+                    <h4>{{ vacancy.name }}</h4>
+                    <span>Toshkent</span>
+                </div>
+                <div class="box-left">
+                    <h4>Преподаватель по дисциплине "спортивный менеджмент" на узбекском языке</h4>
+                    <span>DataSite Technology, Toshkent</span>
+                </div>
+            </div>
+            {% endfor %}
+
             <div class="box_1">
                 <div class="box-right">
                     <h4>Junior-middle java back-end разработчик</h4>
@@ -118,6 +130,8 @@
                     <span>от 300 до 800 USD</span>
                 </div>
             </div>
+
+
             <div class="box_2">
                 <div class="box-right">
                     <h4>Junior-middle java back-end разработчик</h4>
