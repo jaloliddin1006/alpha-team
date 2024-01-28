@@ -22,11 +22,12 @@ app = Client("userbot2", API_ID, API_HASH)
 async def nb_command(_, msg: types.Message):
 
     category = classifier(msg.text)
+    print("test")
     link = msg.link
     if len(msg.text) > 70:
         save_vacancy( category, link)
         await app.send_message(973108256, f"yangi ish qo'shildi: {category}  |  {link}")
-        # await msg.copy(973108256)
+    # await msg.copy(973108256)
 
 
 
