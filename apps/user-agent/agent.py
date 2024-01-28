@@ -1,9 +1,14 @@
 from pyrogram import Client, filters, types
 from classifer import classifier
+from save_db import save_vacancy
+import os
 
-API_ID = 25652534
-API_HASH = '9787c9f77cfb0182c002ea94c4073e73'
-CHANNEL_ID = '-1001275637856'
+# API_ID = os.getenv("API_ID")
+# API_HASH = os.getenv("API_HASH")
+
+API_ID=25652534
+API_HASH='9787c9f77cfb0182c002ea94c4073e73'
+
 
 if not API_HASH or API_ID == 1234:
     print("my.telegram.org dan olgan ma'lumotlaringizni kiriting")
@@ -17,8 +22,11 @@ app = Client("userbot2", API_ID, API_HASH)
 async def nb_command(_, msg: types.Message):
 
     category = classifier(msg.text)
-    # if result[1] > 70:
-    await msg.copy(973108256)
+    link = msg.link
+    if len(msg.text) > 70:
+        save_vacancy( category, link)
+        await app.send_message(973108256, f"yangi ish qo'shildi: {category}  |  {link}")
+        # await msg.copy(973108256)
 
 
 
@@ -30,19 +38,5 @@ async def join(_, msg: types.Message):
         await msg.reply_text(f"Joined to {username}")
 
 
-# @app.on_message(filters.channel)
-# async def nb_command(_, msg: types.Message):
-#     pass
-    # if msg.chat.id == CHANNEL_ID:
-    # if msg.text 
-        # await msg.copy('@Jonibek_Yorqulov')
-    # await msg.copy(973108256)
-    # await msg.forward(973108256)
-
-# @app.on_message(filters.me & filters.command("nb", prefixes=[".", "!"]))
-# async def nb_command(_, msg: types.Message):
-#     await msg.edit_text(TEXT)
-    
-    
 
 app.run()

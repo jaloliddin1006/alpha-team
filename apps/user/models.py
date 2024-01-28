@@ -40,5 +40,6 @@ class Vacancy(models.Model):
     technologies = models.ManyToManyField(Technology, blank=True)
     city = models.ForeignKey(City, on_delete=models.CASCADE, null=True, blank=True)
     price = models.CharField(max_length=30, blank=True, null=True)
-    vacancies = models.ForeignKey(Organization, on_delete=models.CASCADE, null=True, blank=True,
+    link = models.CharField(max_length=325, blank=True, null=True)
+    organization = models.ForeignKey(Organization, on_delete=models.CASCADE, null=True, blank=True,
                                   related_name="organization_vacancies")
