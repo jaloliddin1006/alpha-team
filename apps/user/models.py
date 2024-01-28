@@ -42,3 +42,5 @@ class Vacancy(models.Model):
     price = models.CharField(max_length=30, blank=True, null=True)
     vacancies = models.ForeignKey(Organization, on_delete=models.CASCADE, null=True, blank=True,
                                   related_name="organization_vacancies")
+    link = models.CharField(max_length=225)
+    

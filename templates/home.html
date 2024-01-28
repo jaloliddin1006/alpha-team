@@ -10,18 +10,18 @@
 
     <div class="left">
         <div class="box_1">
-            <span>3 765</span>
-            <span>rezyume <i style="margin-left: 8px;" class="fas fa-external-link-square-alt"></i></span>
+            <span>19517,5</span>
+            <span>Vakansiyalar <i style="margin-left: 8px;" class="fas fa-external-link-square-alt"></i></span>
         </div>
 
         <div class="box_2">
-            <span>5 059</span>
-            <span>vakansiyalar <i style="margin-left: 8px;" class="fas fa-external-link-square-alt"></i></span>
+            <span>1332,7</span>
+            <span>Ishsizlar <i style="margin-left: 8px;" class="fas fa-external-link-square-alt"></i></span>
         </div>
 
         <div class="box_3">
-            <span>159</span>
-            <span>kompaniyalar <i style="margin-left: 8px;" class="fas fa-external-link-square-alt"></i></span>
+            <span>485024</span>
+            <span>Kompaniyalar <i style="margin-left: 8px;" class="fas fa-external-link-square-alt"></i></span>
         </div>
     </div>
     
@@ -34,68 +34,71 @@
             <div class="dasturchi">
                 <div class="box">
                     <h4>Dasturchi</h4>
-                    <span>1 199 800 - 13 999 900 сум</span>
-                    <span>44 вакансии</span>
+                    <span>10 331 318,8 - 10 057 615,8 сум</span>
+                    
                 </div>
             </div>
 
             <div class="dizayner">
                 <div class="box">
-                    <h4>Dizayner</h4>
-                    <span>1 199 800 - 13 999 900 сум</span>
-                    <span>44 вакансии</span>
+                    <h4>Ishlab chiqarish sanoati</h4>
+                    <span>5 150 728,5 - 5 256 400,6 сум</span>
+                    
                 </div>
             </div>
 
             <div class="admin">
                 <div class="box">
-                    <h4>Tizim administratori</h4>
-                    <span>1 199 800 - 13 999 900 сум</span>
-                    <span>44 вакансии</span>
+                    <h4>Moliya vа sug`urtа</h4>
+                    <span>12 433 740,3 - 12 797     812,7 сум</span>
+                    
                 </div>
             </div>
 
             <div class="haydovchi">
                 <div class="box">
-                    <h4>Haydovchi</h4>
-                    <span>1 199 800 - 13 999 900 сум</span>
-                    <span>44 вакансии</span>
+                    <h4>Sog`liqni sаqlаsh</h4>
+                    <span>2 869 257,7 - 2 917 290,7 сум</span>
+                    
                 </div>
             </div>
+
+            
         </div>
 
-        <div class="bulim_2">
-            <div class="admin">
+        <div class="bulim_1">
+            
+            <div class="dasturchi">
                 <div class="box">
-                    <h4>Tizim administratori</h4>
-                    <span>1 199 800 - 13 999 900 сум</span>
-                    <span>44 вакансии</span>
-                </div>
-            </div>
-
-            <div class="haydovchi">
-                <div class="box">
-                    <h4>Haydovchi</h4>
-                    <span>1 199 800 - 13 999 900 сум</span>
-                    <span>44 вакансии</span>
-                </div>
-            </div>
-
-            <div class="dizayner">
-                <div class="box">
-                    <h4>Dizayner</h4>
-                    <span>1 199 800 - 13 999 900 сум</span>
-                    <span>44 вакансии</span>
+                    <h4>Tа'lim</h4>
+                    <span>3 041 991,2 - 3 043 545,1 сум</span>
+                    
                 </div>
             </div>
 
             <div class="dasturchi">
                 <div class="box">
-                    <h4>Dasturchi</h4>
-                    <span>1 199 800 - 13 999 900 сум</span>
-                    <span>44 вакансии</span>
+                    <h4>Qurilish</h4>
+                    <span>5 111 497,3 - 5 327 359,7 сум</span>
+                   
                 </div>
             </div>
+            <div class="admin">
+                <div class="box">
+                    <h4>Tizim administratori</h4>
+                    <span>1 199 800 - 13 999 900 сум</span>
+                    
+                </div>
+            </div>
+
+            <div class="haydovchi">
+                <div class="box">
+                    <h4>Haydovchi</h4>
+                    <span>1 199 800 - 13 999 900 сум</span>
+                    
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -106,54 +109,20 @@
         </div>
 
         <div class="kurs">
+            {% for vacancies in vacancies %}
             <div class="box_1">
                 <div class="box-right">
-                    <h4>Junior-middle java back-end разработчик</h4>
-                    <span>DataSite Technology, Toshkent</span>
-                    <span>от 300 до 800 USD</span>
+                    <a href="{{ vacancies.link }}"><h4>{{ vacancies.name }}</h4></a>
+                    <!-- <span>{{ vacancies.technologies }}, {{ vacancies.city }}</span> -->
+                    
                 </div>
-                <div class="box-left">
+                <!-- <div class="box-left">
                     <h4>Преподаватель по дисциплине "спортивный менеджмент" на узбекском языке</h4>
                     <span>DataSite Technology, Toshkent</span>
-                    <span>от 300 до 800 USD</span>
-                </div>
+                    
+                </div> -->
             </div>
-            <div class="box_2">
-                <div class="box-right">
-                    <h4>Junior-middle java back-end разработчик</h4>
-                    <span>DataSite Technology, Toshkent</span>
-                    <span>от 300 до 800 USD</span>
-                </div>
-                <div class="box-left">
-                    <h4>Junior-middle java back-end разработчик</h4>
-                    <span>DataSite Technology, Toshkent</span>
-                    <span>от 300 до 800 USD</span>
-                </div>
-            </div>
-            <div class="box_3">
-                <div class="box-right">
-                    <h4>Junior-middle java back-end разработчик</h4>
-                    <span>DataSite Technology, Toshkent</span>
-                    <span>от 300 до 800 USD</span>
-                </div>
-                <div class="box-left">
-                    <h4>Junior-middle java back-end разработчик</h4>
-                    <span>DataSite Technology, Toshkent</span>
-                    <span>от 300 до 800 USD</span>
-                </div>
-            </div>
-            <div class="box_4">
-                <div class="box-right">
-                    <h4>Junior-middle java back-end разработчик</h4>
-                    <span>DataSite Technology, Toshkent</span>
-                    <span>от 300 до 800 USD</span>
-                </div>
-                <div class="box-left">
-                    <h4>Junior-middle java back-end разработчик</h4>
-                    <span>DataSite Technology, Toshkent</span>
-                    <span>от 300 до 800 USD</span>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 
